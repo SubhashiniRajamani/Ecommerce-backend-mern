@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Grid Span </title>
+<link rel="stylesheet" href="grid span.css">
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header">HEADER</div>
+  <div class="sidebar">SIDEBAR</div>
+  <div class="main">MAIN CONTENT</div>
+  <div class="extra">EXTRA CONTENT</div>
+  <div class="footer">FOOTER</div>
+</div>
+
+
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 10px 1fr 1fr 60px;
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+}
+
+.header {
+  background: palegoldenrod; 
+  color: white;
+  grid-column: span 20;
+  display: flex;       
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.sidebar {
+  background: plum;
+  color: white;
+  grid-row: span 20;     
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.main {
+  background:paleturquoise;
+  padding: 20px;
+  grid-row: span 20;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+
+.extra {
+  background:lavenderblush;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  grid-row: span 20;
+  color: white;
+}
+
+
+.footer {
+  background: pink;
+  color: white;
+  grid-row: span 20;
+  padding: 20px;
+
+  
+}
+</style>
+</body>
+</html>
+
+

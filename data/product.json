@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Wireless Bluetooth Headphones",
+    "price": "2999",
+    "description": "High-quality wireless headphones with noise cancellation and long battery life.",
+    "ratings": "4.5",
+    "images": [
+      { "image": "https://example.com/images/headphone-front.jpg" },
+      { "image": "https://example.com/images/headphone-side.jpg" }
+    ],
+    "category": "Electronics",
+    "seller": "Tech Store",
+    "stock": "150",
+    "numofreviews": "87",
+    "createdAt": "2025-01-10T10:30:00.000Z"
+  },
+  {
+    "name": "Smart Watch",
+    "price": "4999",
+    "description": "Fitness tracking smart watch with heart rate monitor and GPS.",
+    "ratings": "4.2",
+    "images": [
+      { "image": "https://example.com/images/watch.jpg" }
+    ],
+    "category": "Wearables",
+    "seller": "Gadget World",
+    "stock": "75",
+    "numofreviews": "45",
+    "createdAt": "2025-01-09T11:00:00.000Z"
+  },
+  {
+    "name": "Gaming Mouse",
+    "price": "1599",
+    "description": "Ergonomic gaming mouse with RGB lighting and adjustable DPI.",
+    "ratings": "4.6",
+    "images": [
+      { "image": "https://example.com/images/mouse.jpg" }
+    ],
+    "category": "Accessories",
+    "seller": "Pro Gamers",
+    "stock": "200",
+    "numofreviews": "132",
+    "createdAt": "2025-01-08T15:20:00.000Z"
+  },
+  {
+    "name": "Laptop Backpack",
+    "price": "1999",
+    "description": "Water-resistant laptop backpack with padded compartments.",
+    "ratings": "4.3",
+    "images": [
+      { "image": "https://example.com/images/backpack.jpg" }
+    ],
+    "category": "Bags",
+    "seller": "Urban Carry",
+    "stock": "90",
+    "numofreviews": "58",
+    "createdAt": "2025-01-07T09:45:00.000Z"
+  },
+  {
+    "name": "Bluetooth Speaker",
+    "price": "3499",
+    "description": "Portable Bluetooth speaker with deep bass and 12-hour playback.",
+    "ratings": "4.4",
+    "images": [
+      { "image": "https://example.com/images/speaker.jpg" }
+    ],
+    "category": "Audio",
+    "seller": "Sound Hub",
+    "stock": "120",
+    "numofreviews": "96",
+    "createdAt": "2025-01-06T18:10:00.000Z"
+  }
+]
