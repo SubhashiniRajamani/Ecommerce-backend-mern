@@ -6,6 +6,7 @@ phases:
       nodejs: 18             # Specifies the Node.js runtime version
   pre_build:
     commands:
+      - export $(cat .env | xargs)
       - npm install --legacy-peer-deps  # Forces npm to install the packages
   build:
     commands:
