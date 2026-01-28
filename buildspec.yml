@@ -3,16 +3,21 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 22             # Specifies the Node.js runtime version
+      nodejs: 22
+
   pre_build:
     commands:
-      - export $(cat .env | xargs)
-      - npm install --legacy-peer-deps  # Forces npm to install the packages
+      - npm ci --legacy-peer-deps
+
   build:
     commands:
       - npm run build
+      - ls -la dist
+
 artifacts:
-  files: 
-    - '**/*'              # Includes all files and subdirectories from the root directory.
-    - 'appspec.yml'          # Includes the appspec.yml file
-    - 'scripts/**' 
+  files:
+    - dist/**/*
+    - package.json
+    - package-lock.json
+    - appspec.yml
+    - scripts/**
