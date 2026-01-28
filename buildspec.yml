@@ -7,7 +7,7 @@ phases:
 
   pre_build:
     commands:
-      - npm install --legacy-peer-deps
+      - npm ci --legacy-peer-deps
 
   build:
     commands:
