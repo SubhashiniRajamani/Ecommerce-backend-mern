@@ -1,21 +1,24 @@
 version: 0.2
 
-phases:
-  install:
-    runtime-versions:
-      nodejs: 22
+env:
+  variables:
+    AWS_REGION: us-east-1
+    IMAGE_NAME: ecommerce-backend
 
+phases:
   pre_build:
     commands:
-      - npm install --legacy-peer-deps
+      - echo Logging in to Amazon ECR
+      - aws ecr get-login-password --region $AWS_REGION |
+        docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
 
   build:
     commands:
-      
+      - echo Building Docker image
+      - docker build -t $IMAGE_NAME .
+      - docker tag $IMAGE_NAME:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
 
-artifacts:
-  files:
-    - build/**/*
-    - appspec.yml
-    - scripts/**
-
+  post_build:
+    commands:
+      - echo Pushing Docker image
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
