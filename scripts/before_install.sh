@@ -1,7 +1,10 @@
 #!/bin/bash
-echo "Stopping old app"
-pm2 delete all
+set -e
 
-echo "Deleting old node_modules"
-cd /home/ubuntu/Ecommerce-backend-mern-main
-rm -rf node_modules/ package-lock.json
+echo "Stopping existing backend container (if any)..."
+
+docker stop ecommerce-backend || true
+docker rm ecommerce-backend || true
+
+echo "Cleaning unused Docker images..."
+docker system prune -af || true
