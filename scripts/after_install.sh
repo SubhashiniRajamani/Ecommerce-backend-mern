@@ -5,11 +5,6 @@ AWS_REGION=us-east-1
 AWS_ACCOUNT_ID=313530061217
 IMAGE_NAME=ecommerce-backend
 
-echo "Logging in to ECR..."
-aws ecr get-login-password --region $AWS_REGION | \
-docker login --username AWS --password-stdin \
-$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
-
 echo "Pulling latest image..."
 docker pull $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
 
