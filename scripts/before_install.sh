@@ -3,8 +3,7 @@ set -e
 
 echo "Stopping existing backend container (if any)..."
 
-docker stop ecommerce-backend-container || true
-docker rm ecommerce-backend-container || true
+docker rm -f 313530061217.dkr.ecr.us-east-1.amazonaws.com/ecommerce-backend
 
 echo "Cleaning unused Docker images..."
 docker system prune -af || true
