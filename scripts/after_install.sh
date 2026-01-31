@@ -2,7 +2,7 @@
 set -e
 
 AWS_REGION=us-east-1
-AWS_ACCOUNT_ID=YOUR_ACCOUNT_ID
+AWS_ACCOUNT_ID=313530061217
 IMAGE_NAME=ecommerce-backend
 
 echo "Logging in to ECR..."
