@@ -3,6 +3,7 @@ version: 0.2
 env:
   variables:
     AWS_REGION: us-east-1
+    AWS_ACCOUNT_ID: "313530061217"
     IMAGE_NAME: ecommerce-backend
 
 phases:
