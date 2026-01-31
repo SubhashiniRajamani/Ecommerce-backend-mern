@@ -10,4 +10,4 @@ echo "Cleaning unused Docker images..."
 docker system prune -af || true
 
 cd /home/ubuntu/Ecommerce-backend-mern-main
-rm -rf *
+rm -rf * .*
