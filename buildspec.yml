@@ -23,9 +23,8 @@ phases:
     commands:
       - echo Pushing Docker image
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
-
-  artifacts:
-    files:
-      - '**/*'
-      - 'appspec.yml'
-      - 'scripts/**'
+artifacts:
+  files:
+    - '**/*'
+    - 'appspec.yml'
+    - 'scripts/**'
